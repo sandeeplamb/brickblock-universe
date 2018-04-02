@@ -75,7 +75,7 @@ KOPS_USER_KEYS="kops_user_access_keys.txt"
 **See it, To Believe it**
 
 <p align="center">
-  <a href="https://asciinema.org/a/iOhpvJQnxi37c7xWEqnw0v7kl">
+  <a href="https://asciinema.org/a/iOhpvJQnxi37c7xWEqnw0v7kl?speed=3">
   <img src="https://asciinema.org/a/iOhpvJQnxi37c7xWEqnw0v7kl.png" width="885"></image>
   </a>
 </p>
@@ -115,7 +115,7 @@ I have created the Kubernetes Resource `YAML` files for FrontEnd API Consumer i.
 **See it, To Believe it**
 
 <p align="center">
-  <a href="https://asciinema.org/a/nNzSpDxECHgjWMLaUanm423rK">
+  <a href="https://asciinema.org/a/nNzSpDxECHgjWMLaUanm423rK?speed=3">
   <img src="https://asciinema.org/a/nNzSpDxECHgjWMLaUanm423rK.png" width="885"></image>
   </a>
 </p>
@@ -140,7 +140,7 @@ ault.svc.cluster.local/GetEmployee; done
 **See it, To Believe it**
 
 <p align="center">
-  <a href="https://asciinema.org/a/asWAqOSTZbL5TJK2Eaa83pVEH">
+  <a href="https://asciinema.org/a/asWAqOSTZbL5TJK2Eaa83pVEH?speed=2">
   <img src="https://asciinema.org/a/asWAqOSTZbL5TJK2Eaa83pVEH.png" width="885"></image>
   </a>
 </p>
