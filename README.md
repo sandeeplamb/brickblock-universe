@@ -171,15 +171,15 @@ star-lord@Guardian:05.create_k8s_resources$
 
 |Tasks                                               | Comments                                                |
 |--------------------------------------------- |---------------------------------------------------------------|
-|**`Acceptance Criteria`**                  |                                                                    |
-|01. K8s Cluster Up and Running                                    | Finished                                                                 |
-|02. FrontEnd Application Running and Accessible                   | Finished                                                                 |
-|03. FrontEnd Displays Data from API                               |  Finished                                                                |
-|04. Code Accessible in GIT                                        | Finished                                                                 |
-|**`Bonus Round`**                                                     |                                                                           |
-|01. HTTPS                                                         | **`Self-Signed-Cert`**                                                         |
-|02. Automate the Cluster                                          | Finished                                                                 |
-|03. Auto-Scaling                                                  | Finished                                                         |
-|04. API Hooked to Database                                        | Finished                                                                 |
-|05. Isolated Staging/Production                                   | **`Only Staging`**                                                             |
+|**`Acceptance Criteria`**                                          |                                                                    |
+|01. K8s Cluster Up and Running                                    | Finished                                                    |
+|02. FrontEnd Application Running and Accessible     | Finished                                                    |
+|03. FrontEnd Displays Data from API                            |  Finished                                                   |
+|04. Code Accessible in GIT                                              | Finished                                                     |
+|**`Bonus Round`**                                                      |                                                                      |
+|01. HTTPS                                                                          | **`Self-Signed-Cert`**                          |
+|02. Automate the Cluster                                               | Finished                                                       |
+|03. Auto-Scaling                                                               | Finished                                                       |
+|04. API Hooked to Database                                         | Finished                                                        |
+|05. Isolated Staging/Production                                   | **`Only Staging`**                                 |
 
