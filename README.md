@@ -32,7 +32,7 @@ The XML file for below architecture is present in `img directory`.
 
 ## Steps to get Infinity Stone
 1. Create KOPS Cluster. It consists of 3 steps. 
-    1. Separate User/Group and assign specific Policies in IAM with root user to administer the KOPS-Cluster.
+    1. Create separate User/Group and assign specific Policies in IAM with root user to administer the KOPS-Cluster.
     1. Create a S3 Bucket to store the state of the KOPS-Cluster.
     1. Create KOPS Cluster.
 1. Create SELF-SIGNED Certificate for NGINX. This step is Optional.
