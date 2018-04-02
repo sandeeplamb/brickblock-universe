@@ -177,27 +177,9 @@ star-lord@Guardian:05.create_k8s_resources$
 |03. FrontEnd Displays Data from API                               |  Finished                                                                |
 |04. Code Accessible in GIT                                        | Finished                                                                 |
 |**`Bonus Round`**                                                     |                                                                           |
-|01. HTTPS                                                         | Self-Signed-Cert                                                         |
+|01. HTTPS                                                         | **`Self-Signed-Cert`**                                                         |
 |02. Automate the Cluster                                          | Finished                                                                 |
-|03. Auto-Scaling                                                  | Self-Signed-Cert                                                         |
+|03. Auto-Scaling                                                  | Finished                                                         |
 |04. API Hooked to Database                                        | Finished                                                                 |
-|05. Isolated Staging/Production                                   | Only Staging                                                             |
+|05. Isolated Staging/Production                                   | **`Only Staging`**                                                             |
 
-
-
-
-
-
-## Acceptance Criteria Tasks
-* Your Kubernetes cluster is up and running. `Done`
-* Your frontend application is running and accessible under a domain of your choice. `Done`
-* The frontend displays data from the API. `Done`
-* The code you've written to create the cluster and deploy the applications is accessible, for example in a GitHub repo. `Done`
-
-
-## Bonus Round (not required, but nice-to-have)
-* Your application is available via SSL `Done`
-* Automate the cluster setup, e.g. through shell scripts or terraform etc. `Done`
-* Your application is auto-scaling. Meaning when you put load on it (via Apache Workbench for example) it automatically auto-scales horizontally by adding more pods `Done`
-* Your API is hooked up to a database (can be inside the cluster or outside) `Done`
-* You have isolated staging and production environments for your application `Nopes. Only Staging environment.`
