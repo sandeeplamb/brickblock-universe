@@ -24,6 +24,18 @@ The XML file for below architecture is present in `img directory`.
 
 ## Pre-requisites
 
+* **[AWS CLI](https://aws.amazon.com/documentation/cli/)** to manage AWS resources
+	* `pip install --upgrade --user awscli`
+	* `aws configure`
+
+* **[terraform](https://www.terraform.io/)** to create  AWS Services
+
+* **[jq](https://stedolan.github.io/jq/)** to parse JSON results returned by the AWS CLI
+
+* **[kops](https://github.com/kubernetes/kops/)** to create the Kubernetes cluster
+
+* **[kubectl](https://kubernetes.io/)** to manage Kubernetes resources
+
 * We are creating `Gossip-Based-KOPS-Cluster`, which makes the Kubernetes cluster DNS-free.
 * Install KUBECTL [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 * Export k8s-Cluster Name in NAME variable in shell. `export NAME=YOUR_CLUSTER_NAME`.
