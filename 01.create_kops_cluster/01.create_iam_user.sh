@@ -1,9 +1,16 @@
 #!/bin/bash
 ####### Variables #########
-LOG_FILE="kops_user_creation_logs_`date +%F`.txt"
-KOPS_USER_KEYS="kops_user_access_keys.txt"
+KOPS_CLUSTER_NAME="kops.cluster.k8s.local"
+KOPS_BUCKET_NAME="starlordkopsbucketbb"
+KOPS_ZONE_NAME="eu-central-1a"
+
 KOPS_USER_NAME="kopsBBUser-01"
 KOPS_GROUP_NAME="kopsBBGroup-01"
+
+LOG_FILE="kops_user_creation_logs_`date +%F`.txt"
+KOPS_USER_KEYS="kops_user_access_keys.txt"
+
+
 KOPS_USER_POLICIES=`cat <<EOF
 AmazonEC2FullAccess
 AmazonRoute53FullAccess
@@ -12,6 +19,8 @@ IAMFullAccess
 AmazonVPCFullAccess
 EOF`
 echo "`date +%F-%T` Starting Script." >> ${LOG_FILE}
+
+###########################
 
 create_aws_user_group()
 {
@@ -81,13 +90,47 @@ ACCESS_KEY=`aws iam list-access-keys --user-name ${KOPS_USER_NAME} | jq -r '.Acc
 	aws iam delete-user --user-name ${KOPS_USER_NAME} >> ${LOG_FILE}
 
 }
+
+create_aws_s3_bucket()
+{
+	echo "`date +%F-%T` Creating AWS-S3-Bucket." >> ${LOG_FILE}
+	aws s3 mb s3://${KOPS_BUCKET_NAME} >> ${LOG_FILE}
+}
+
+delete_aws_s3_bucket()
+{
+        echo "`date +%F-%T` Deleting AWS-S3-Bucket." >> ${LOG_FILE}
+	aws s3 rb s3://${KOPS_BUCKET_NAME} >> ${LOG_FILE}
+}
+
+
+create_kops_cluster()
+{
+	echo "`date +%F-%T` Creating KOPS-Local-Cluster." >> ${LOG_FILE}
+	export KOPS_STATE_STORE=s3://${KOPS_BUCKET_NAME}
+	kops create cluster ${KOPS_CLUSTER_NAME} --zones ${KOPS_ZONE_NAME} --yes
+}
+
+delete_kops_cluster()
+{
+	echo "`date +%F-%T` Deleting KOPS-Local-Cluster." >> ${LOG_FILE}
+	export KOPS_STATE_STORE=s3://${KOPS_BUCKET_NAME}
+	kops delete cluster ${KOPS_CLUSTER_NAME} --yes	
+}
+
 main()
 {
 case "$1" in
 create)
-	create_aws_user_group ;;
+	create_aws_user_group 
+	create_aws_s3_bucket
+	create_kops_cluster
+	;;
 delete)
-	delete_aws_user_group ;;
+	delete_kops_cluster
+	delete_aws_s3_bucket
+	delete_aws_user_group 
+	;;
 *)
 	clear
 	cat figlet_attention.txt
