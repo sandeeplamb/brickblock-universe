@@ -1,0 +1,59 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: nginx-for-bb
+  name: nginx-for-bb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: nginx-for-bb
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        run: nginx-for-bb
+    spec:
+      containers:
+      - image: nginx
+        imagePullPolicy: IfNotPresent
+        name: nginx-for-bb
+        volumeMounts:
+         - name: nginx-key
+           mountPath: /etc/ssl/keys
+         - name: nginx-cert
+           mountPath: /etc/ssl/certs
+         - name: default-file
+           mountPath: /etc/nginx/conf.d
+      volumes:
+        - name: default-file
+          configMap:
+            name: nginx-default-bb
+        - name: nginx-key
+          configMap:
+            name: nginx-key-bb
+        - name: nginx-cert
+          configMap:
+            name: nginx-cert-bb
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: nginx-for-bb
+  name: nginx-for-bb
+spec:
+#  type: NodePort
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: 443
+  selector:
+    run: nginx-for-bb

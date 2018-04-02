@@ -1,0 +1,5 @@
+export KOPS_STATE_STORE=s3://starlordkopsbucketbb
+kops create cluster kops.cluster.k8s.local --zones eu-central-1a --yes
+kops validate cluster
+kops delete cluster kops.cluster.k8s.local --yes
+
