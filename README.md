@@ -36,12 +36,6 @@ The XML file for below architecture is present in `img directory`.
 
 * **[kubectl](https://kubernetes.io/)** to manage Kubernetes resources
 
-* We are creating `Gossip-Based-KOPS-Cluster`, which makes the Kubernetes cluster DNS-free.
-* Install KUBECTL [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
-* Export k8s-Cluster Name in NAME variable in shell. `export NAME=YOUR_CLUSTER_NAME`.
-* Export KOPS_STATE_STORE variable in shell. `export KOPS_STATE_STORE=s3://YOUR_BUCKET_NAME`.
-* If don’t want to use env variables. You can define the values using the `–name` and `–state` flags in kops command. 
-
 ## Steps to get Infinity Stone
 1. Create KOPS Cluster. It consists of 3 steps. 
     1. Create separate User/Group and assign specific Policies in IAM with root user to administer the KOPS-Cluster.
