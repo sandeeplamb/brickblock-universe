@@ -169,9 +169,9 @@ star-lord@Guardian:05.create_k8s_resources$
 
 #### Tasks Completion Matrix
 
-|    |Tasks                                               | Comments                                             | 
-|    |----------------------------------------------|---------------------------------------------------- |
-|01|K8s Cluster Up and Running      | Finished                                                  |
+|Tasks                                               | Comments                                             |
+|--------------------------------------------- |------------------------------------------------------------|
+|K8s Cluster Up and Running      | Finished                                                                 |
 
 
 ## Acceptance Criteria Tasks
