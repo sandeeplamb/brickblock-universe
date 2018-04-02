@@ -1,22 +1,6 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: mongo
-spec:
-  maxReplicas: 5
-  minReplicas: 2
-  scaleTargetRef:
-    apiVersion: extensions/v1beta1
-    kind: Deployment
-    name: mongo
-  targetCPUUtilizationPercentage: 10
-status:
-  currentReplicas: 0
-  desiredReplicas: 0
----
-apiVersion: autoscaling/v1
-kind: HorizontalPodAutoscaler
-metadata:
   name: nginx-for-bb
 spec:
   maxReplicas: 5
