@@ -167,6 +167,13 @@ star-lord@Guardian:05.create_k8s_resources$
 star-lord@Guardian:05.create_k8s_resources$ 
 ```
 
+#### Tasks Completion Matrix
+
+|    |Tasks                                               | Comments                                             | 
+|    |----------------------------------------------|---------------------------------------------------- |
+|01|K8s Cluster Up and Running      | Finished                                                  |
+
+
 ## Acceptance Criteria Tasks
 * Your Kubernetes cluster is up and running. `Done`
 * Your frontend application is running and accessible under a domain of your choice. `Done`
