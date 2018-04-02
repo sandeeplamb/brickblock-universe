@@ -24,6 +24,7 @@ The XML file for below architecture is present in `img directory`.
 
 ## Pre-requisites
 
+* We are creating `Gossip-Based-KOPS-Cluster`, which makes the Kubernetes cluster DNS-free.
 * Install KUBECTL [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 * Export k8s-Cluster Name in NAME variable in shell. `export NAME=YOUR_CLUSTER_NAME`.
 * Export KOPS_STATE_STORE variable in shell. `export KOPS_STATE_STORE=s3://YOUR_BUCKET_NAME`.
@@ -41,16 +42,37 @@ The XML file for below architecture is present in `img directory`.
 
 Change directory `01.create_kops_user`.
 
-I made a script which will Automate the creation and deletion of Group, User, attach Policies and Users to Group.
+I made a script which will Automate the creation of KOPS-Cluster.
 The script will take one arguement either `create or delete`.
 
-You can not run script with any other random arguement or more than one arguement.
+`create` arguement will create the AWS-IAM user, group, attaching policies and groups, AWS-S3 Bucket and KOPS-cluster for you.
+`delete` arguement will delete the AWS-IAM user, group, attaching policies and groups, AWS-S3 Bucket and KOPS-cluster for you.
 
-`create` arguement will create the user, group, attaching policies and groups for you.
-`delete` arguement will delete the user, group, attaching policies and groups for you.
+In the script, there are HARD-CODED variables. 
+If you wish to change them,like Bucket-Name, Cluster-Name, Region, you can changed directly into the script.
+
+```
+#!/bin/bash
+####### Variables #########
+KOPS_CLUSTER_NAME="kops.cluster.k8s.local"
+KOPS_BUCKET_NAME="starlordkopsbucketbb"
+KOPS_ZONE_NAME="eu-central-1a"
+
+KOPS_USER_NAME="kopsBBUser-01"
+KOPS_GROUP_NAME="kopsBBGroup-01"
+
+LOG_FILE="kops_user_creation_logs_`date +%F`.txt"
+KOPS_USER_KEYS="kops_user_access_keys.txt"
+```
+
 
 **See it, To Believe it**
 
+<p align="center">
+  <a href="https://asciinema.org/a/97298">
+  <img src="https://asciinema.org/a/97298.png" width="885"></image>
+  </a>
+</p>
 
 ## Step-02-to-Infinity-Stone
 **Create the Self-Signed-Certificate/Optional-Step**
@@ -63,12 +85,18 @@ Script `01.create_cert.sh` will create the cert and key which is `WILDCARD Certi
 
 **See it, To Believe it**
 
+<p align="center">
+  <a href="https://asciinema.org/a/iOhpvJQnxi37c7xWEqnw0v7kl">
+  <img src="https://asciinema.org/a/iOhpvJQnxi37c7xWEqnw0v7kl.png" width="885"></image>
+  </a>
+</p>
+
 ## Step-03-to-Infinity-Stone
 **Create the Kubernetes Resources**
 
 Change directory `05.create_k8s_resources`.
 
-I have created the Kubernetes Resource `YAML` files for FrontEnd API Consumer i.e. Nginx, BackEnd Node App and Database DB.
+I have created the Kubernetes Resource `YAML` files for FrontEnd API Consumer i.e. Nginx, BackEnd Node, Database DB, HPA and Heapster.
 
 **Keep-In-Mind**
 
@@ -79,6 +107,11 @@ I have created the Kubernetes Resource `YAML` files for FrontEnd API Consumer i.
 
 **See it, To Believe it**
 
+<p align="center">
+  <a href="https://asciinema.org/a/97298">
+  <img src="https://asciinema.org/a/97298.png" width="885"></image>
+  </a>
+</p>
 
 # Tasks Completion Matrix
 

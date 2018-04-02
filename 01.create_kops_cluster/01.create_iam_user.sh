@@ -108,14 +108,14 @@ create_kops_cluster()
 {
 	echo "`date +%F-%T` Creating KOPS-Local-Cluster." >> ${LOG_FILE}
 	export KOPS_STATE_STORE=s3://${KOPS_BUCKET_NAME}
-	kops create cluster ${KOPS_CLUSTER_NAME} --zones ${KOPS_ZONE_NAME} --yes
+	kops create cluster --name ${KOPS_CLUSTER_NAME} --state s3://${KOPS_BUCKET_NAME} --zones ${KOPS_ZONE_NAME} --yes
 }
 
 delete_kops_cluster()
 {
 	echo "`date +%F-%T` Deleting KOPS-Local-Cluster." >> ${LOG_FILE}
 	export KOPS_STATE_STORE=s3://${KOPS_BUCKET_NAME}
-	kops delete cluster ${KOPS_CLUSTER_NAME} --yes	
+	kops delete cluster --name ${KOPS_CLUSTER_NAME} --state s3://${KOPS_BUCKET_NAME} --yes	
 }
 
 main()
