@@ -31,7 +31,7 @@ The XML file for below architecture is present in `img directory`.
 * If don’t want to use env variables. You can define the values using the `–name` and `–state` flags in kops command. 
 
 ## Steps to get Infinity Stone
-1. Create KOPS CLuster. It consists of 3 steps. 
+1. Create KOPS Cluster. It consists of 3 steps. 
     1. Separate User/Group and assign specific Policies in IAM with root user to administer the KOPS-Cluster.
     1. Create a S3 Bucket to store the state of the KOPS-Cluster.
     1. Create KOPS Cluster.
