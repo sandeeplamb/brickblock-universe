@@ -169,7 +169,8 @@ star-lord@Guardian:05.create_k8s_resources$
 
 #### Tasks Completion Matrix
 
-|Tasks                                               | Comments                                                                                  |
+|Tasks                                               | Comments                                                |
+|--------------------------------------------- |---------------------------------------------------------------|
 |**`Acceptance Criteria`**                                          |                                                                    |
 |01. K8s Cluster Up and Running                                    | Finished                                                    |
 |02. FrontEnd Application Running and Accessible     | Finished                                                    |
