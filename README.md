@@ -69,15 +69,15 @@ KOPS_USER_KEYS="kops_user_access_keys.txt"
 **See it, To Believe it**
 
 <p align="center">
-  <a href="https://asciinema.org/a/97298">
-  <img src="https://asciinema.org/a/97298.png" width="885"></image>
+  <a href="https://asciinema.org/a/iOhpvJQnxi37c7xWEqnw0v7kl">
+  <img src="https://asciinema.org/a/iOhpvJQnxi37c7xWEqnw0v7kl.png" width="885"></image>
   </a>
 </p>
 
 ## Step-02-to-Infinity-Stone
 **Create the Self-Signed-Certificate/Optional-Step**
 
-Change directory `04.create_nginx_cert`.
+Change directory `03.create_nginx_cert`.
 
 We create the self-signed certificate to handle HTTPS.
 Yes, its not secure but the `TASK have an additional cookie` if you made your cluster app running over HTTPS.
@@ -86,15 +86,15 @@ Script `01.create_cert.sh` will create the cert and key which is `WILDCARD Certi
 **See it, To Believe it**
 
 <p align="center">
-  <a href="https://asciinema.org/a/iOhpvJQnxi37c7xWEqnw0v7kl">
-  <img src="https://asciinema.org/a/iOhpvJQnxi37c7xWEqnw0v7kl.png" width="885"></image>
+  <a href="https://asciinema.org/a/1Z2t6t7oUFc9usdCaBgI2cPlz">
+  <img src="https://asciinema.org/a/1Z2t6t7oUFc9usdCaBgI2cPlz.png" width="885"></image>
   </a>
 </p>
 
 ## Step-03-to-Infinity-Stone
 **Create the Kubernetes Resources**
 
-Change directory `05.create_k8s_resources`.
+Change directory `04.create_k8s_resources`.
 
 I have created the Kubernetes Resource `YAML` files for FrontEnd API Consumer i.e. Nginx, BackEnd Node, Database DB, HPA and Heapster.
 
@@ -104,12 +104,13 @@ I have created the Kubernetes Resource `YAML` files for FrontEnd API Consumer i.
 * Check file `01.create_nginx_config_maps.yaml` i.e. `proxy_pass http://my-emp`.
 * No need to change other configMaps.
 * For HPA or autoscaling, please make sure that `Heapster` Pod is running to collect metrics.
+* Order of execution of K8s resources is important. So, follow the commands as given below in video.
 
 **See it, To Believe it**
 
 <p align="center">
-  <a href="https://asciinema.org/a/97298">
-  <img src="https://asciinema.org/a/97298.png" width="885"></image>
+  <a href="https://asciinema.org/a/nNzSpDxECHgjWMLaUanm423rK">
+  <img src="https://asciinema.org/a/nNzSpDxECHgjWMLaUanm423rK.png" width="885"></image>
   </a>
 </p>
 
