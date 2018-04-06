@@ -131,10 +131,10 @@ Let see if we load the server, PODS will scale or not.
 You need to run the below POD and query in separate terminal and then check what happens to our NGINX and APP resources.
 
 ```
-star-lord@Guardian:05.create_load$ `kubectl run -i --tty load-generator --image=busybox /bin/sh`
+star-lord@Guardian:05.create_load$ **kubectl run -i --tty load-generator --image=busybox /bin/sh**
 If you don't see a command prompt, try pressing enter.
-/ # `while true; do wget -q -O- --header "empid: 12345" --header "Content-Type: application/x-www-form-urlencoded" http://nginx-for-bb.def
-ault.svc.cluster.local/GetEmployee; done`
+/ # **while true; do wget -q -O- --header "empid: 12345" --header "Content-Type: application/x-www-form-urlencoded" http://nginx-for-bb.def
+ault.svc.cluster.local/GetEmployee; done**
 ```
 
 **See it, To Believe it**
