@@ -1,9 +1,0 @@
-{
-    "AccessKey": {
-        "UserName": "kopsBBUser-01",
-        "AccessKeyId": "AKIAI2UPO6UJWVYM66SA",
-        "Status": "Active",
-        "SecretAccessKey": "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",
-        "CreateDate": "2018-04-09T13:44:32.982Z"
-    }
-}
