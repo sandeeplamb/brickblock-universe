@@ -75,7 +75,7 @@ KOPS_USER_KEYS="kops_user_access_keys.txt"
 **See it, To Believe it**
 
 <p align="center">
-  <a href="https://asciinema.org/a/iOhpvJQnxi37c7xWEqnw0v7kl?speed=3">
+  <a href="https://asciinema.org/a/iOhpvJQnxi37c7xWEqnw0v7kl?speed=3&amp;autoplay=1">
   <img src="https://asciinema.org/a/iOhpvJQnxi37c7xWEqnw0v7kl.png" width="885"></image>
   </a>
 </p>
@@ -92,7 +92,7 @@ Script `01.create_cert.sh` will create the cert and key which is `WILDCARD Certi
 **See it, To Believe it**
 
 <p align="center">
-  <a href="https://asciinema.org/a/1Z2t6t7oUFc9usdCaBgI2cPlz">
+  <a href="https://asciinema.org/a/1Z2t6t7oUFc9usdCaBgI2cPlz?autoplay=1">
   <img src="https://asciinema.org/a/1Z2t6t7oUFc9usdCaBgI2cPlz.png" width="885"></image>
   </a>
 </p>
@@ -115,7 +115,7 @@ I have created the Kubernetes Resource `YAML` files for FrontEnd API Consumer i.
 **See it, To Believe it**
 
 <p align="center">
-  <a href="https://asciinema.org/a/nNzSpDxECHgjWMLaUanm423rK?speed=3">
+  <a href="https://asciinema.org/a/nNzSpDxECHgjWMLaUanm423rK?speed=3&amp;autoplay=1">
   <img src="https://asciinema.org/a/nNzSpDxECHgjWMLaUanm423rK.png" width="885"></image>
   </a>
 </p>
@@ -140,7 +140,7 @@ ault.svc.cluster.local/GetEmployee; done
 **See it, To Believe it**
 
 <p align="center">
-  <a href="https://asciinema.org/a/asWAqOSTZbL5TJK2Eaa83pVEH?speed=2">
+  <a href="https://asciinema.org/a/asWAqOSTZbL5TJK2Eaa83pVEH?speed=2&amp;autoplay=1">
   <img src="https://asciinema.org/a/asWAqOSTZbL5TJK2Eaa83pVEH.png" width="885"></image>
   </a>
 </p>

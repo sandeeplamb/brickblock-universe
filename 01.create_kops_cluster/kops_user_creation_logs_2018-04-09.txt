@@ -1,0 +1,69 @@
+2018-04-09-15:40:16 Starting Script.
+2018-04-09-15:40:21 Starting Script.
+2018-04-09-15:40:21 01.Creating-Group
+2018-04-09-15:40:21 02.Attaching Policies
+2018-04-09-15:40:21 	 Attaching Policy AmazonEC2FullAccess.
+2018-04-09-15:40:21 	 Attaching Policy AmazonRoute53FullAccess.
+2018-04-09-15:40:21 	 Attaching Policy AmazonS3FullAccess.
+2018-04-09-15:40:21 	 Attaching Policy IAMFullAccess.
+2018-04-09-15:40:21 	 Attaching Policy AmazonVPCFullAccess.
+2018-04-09-15:40:21 03.Creating-Kops-User
+2018-04-09-15:40:21 04.Add Kops-User to Group
+2018-04-09-15:40:21 05.Creating Access/Secret Keys
+2018-04-09-15:40:21 Creating AWS-S3-Bucket.
+2018-04-09-15:40:21 Creating KOPS-Local-Cluster.
+2018-04-09-15:44:23 Starting Script.
+2018-04-09-15:44:23 01.Creating-Group
+{
+    "Group": {
+        "Path": "/",
+        "GroupName": "kopsBBGroup-01",
+        "GroupId": "AGPAINJKT3YNS7WEBZ2C4",
+        "Arn": "arn:aws:iam::588264859810:group/kopsBBGroup-01",
+        "CreateDate": "2018-04-09T13:44:24.722Z"
+    }
+}
+2018-04-09-15:44:24 02.Attaching Policies
+2018-04-09-15:44:24 	 Attaching Policy AmazonEC2FullAccess.
+2018-04-09-15:44:25 	 Attaching Policy AmazonRoute53FullAccess.
+2018-04-09-15:44:26 	 Attaching Policy AmazonS3FullAccess.
+2018-04-09-15:44:28 	 Attaching Policy IAMFullAccess.
+2018-04-09-15:44:29 	 Attaching Policy AmazonVPCFullAccess.
+2018-04-09-15:44:30 03.Creating-Kops-User
+{
+    "User": {
+        "Path": "/",
+        "UserName": "kopsBBUser-01",
+        "UserId": "AIDAJXUQBTUYXM4CX7ELO",
+        "Arn": "arn:aws:iam::588264859810:user/kopsBBUser-01",
+        "CreateDate": "2018-04-09T13:44:30.950Z"
+    }
+}
+2018-04-09-15:44:31 04.Add Kops-User to Group
+2018-04-09-15:44:32 05.Creating Access/Secret Keys
+{
+    "AccessKey": {
+        "UserName": "kopsBBUser-01",
+        "AccessKeyId": "AKIAI2UPO6UJWVYM66SA",
+        "Status": "Active",
+        "SecretAccessKey": "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",
+        "CreateDate": "2018-04-09T13:44:32.982Z"
+    }
+}
+2018-04-09-15:44:33 Creating AWS-S3-Bucket.
+make_bucket: starlordkopsbucketbb
+2018-04-09-15:44:34 Creating KOPS-Local-Cluster.
+2018-04-09-16:47:50 Starting Script.
+2018-04-09-16:47:50 Deleting KOPS-Local-Cluster.
+2018-04-09-16:49:11 Deleting AWS-S3-Bucket.
+remove_bucket: starlordkopsbucketbb
+2018-04-09-16:49:12 01.DELETING Kops-Group
+2018-04-09-16:49:13 02.Detaching Policies from Kops-Group
+2018-04-09-16:49:13 	 Detaching Policy AmazonEC2FullAccess.
+2018-04-09-16:49:14 	 Detaching Policy AmazonRoute53FullAccess.
+2018-04-09-16:49:16 	 Detaching Policy AmazonS3FullAccess.
+2018-04-09-16:49:17 	 Detaching Policy IAMFullAccess.
+2018-04-09-16:49:18 	 Detaching Policy AmazonVPCFullAccess.
+2018-04-09-16:49:19 03.DELETING Kops-Group
+2018-04-09-16:49:20 04.DELETING ACCESS-Key
+2018-04-09-16:49:23 05.DELETING Kops-User
